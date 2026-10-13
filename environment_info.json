@@ -1,0 +1,14 @@
+{
+  "python_version": "3.14.7",
+  "python_implementation": "CPython",
+  "platform": "macOS-26.6-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.5.3",
+    "ipykernel": "7.3.0"
+  },
+  "scope": "Day 13\u201316 finance forecasting notebooks and shared modules"
+}
