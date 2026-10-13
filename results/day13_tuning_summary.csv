@@ -1,0 +1,4 @@
+method,mean_fold_RMSE,best_parameters
+ridge,0.7111843796024286,"{""model__alpha"": 1000}"
+lasso,0.7210650897556896,"{""model__alpha"": 0.05}"
+random_forest,0.7329426135245287,"{""max_depth"": 3, ""max_features"": 0.7, ""min_samples_leaf"": 10}"

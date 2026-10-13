@@ -1,0 +1,13 @@
+variable,description,unit
+date,Trading date,Date
+sp500,S&P 500 closing index level,Index points
+vix,Expected 30-day S&P 500 volatility,Annualized percent
+treasury_10yr,10-year Treasury constant-maturity yield,Percent
+simple_return,Daily simple S&P 500 return,Percent
+log_return,Daily S&P 500 log return,Percent
+absolute_return,Absolute log-return volatility proxy,Percent
+squared_return,Squared log-return volatility proxy,Percent squared
+vix_change,Daily change in VIX,Index points
+treasury_change,Daily change in the 10-year Treasury yield,Percentage points
+target_next_day,Next-trading-day absolute S&P 500 return,Percent
+sample,"Training, validation or test designation",Category

@@ -1,0 +1,13 @@
+feature,definition,units
+absolute_return,Absolute log return today: |100 log(P_t/P_t-1)|,percentage points
+mean_abs_5,Mean absolute return over 5 trading observations ending today,percentage points
+mean_abs_20,Mean absolute return over 20 trading observations ending today,percentage points
+vix,Today's VIX closing level,VIX index points
+treasury_change,Today's 10-year yield minus yield at previous S&P observation; missing if either is missing,yield percentage points
+log_return,Signed log return today,percentage points
+return_lag_1,Signed log return at previous trading observation,percentage points
+abs_lag_1,Absolute return at previous trading observation,percentage points
+abs_lag_5,Absolute return 5 trading observations before today,percentage points
+squared_return,Square of today's percentage-point log return,squared percentage points
+return_std_5,Sample standard deviation of signed returns over 5 trading observations ending today,percentage points; not annualized
+return_std_20,Sample standard deviation of signed returns over 20 trading observations ending today,percentage points; not annualized

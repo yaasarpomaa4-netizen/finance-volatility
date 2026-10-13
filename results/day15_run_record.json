@@ -1,0 +1,389 @@
+{
+  "protocol": {
+    "analysis": "Exploratory robustness after final 2025 test was viewed",
+    "scenarios": [
+      {
+        "name": "original",
+        "check": "reference",
+        "train_start": null,
+        "horizon": 1,
+        "target_kind": "point",
+        "feature_map": {
+          "ols": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change"
+          ],
+          "lasso": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ],
+          "random_forest": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ]
+        }
+      },
+      {
+        "name": "window_2018_2022",
+        "check": "training_window",
+        "train_start": "2018-01-01",
+        "horizon": 1,
+        "target_kind": "point",
+        "feature_map": {
+          "ols": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change"
+          ],
+          "lasso": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ],
+          "random_forest": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ]
+        }
+      },
+      {
+        "name": "window_2020_2022",
+        "check": "training_window",
+        "train_start": "2020-01-01",
+        "horizon": 1,
+        "target_kind": "point",
+        "feature_map": {
+          "ols": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change"
+          ],
+          "lasso": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ],
+          "random_forest": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ]
+        }
+      },
+      {
+        "name": "without_vix",
+        "check": "features",
+        "train_start": null,
+        "horizon": 1,
+        "target_kind": "point",
+        "feature_map": {
+          "ols": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "treasury_change"
+          ],
+          "lasso": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "treasury_change",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ],
+          "random_forest": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "treasury_change",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ]
+        }
+      },
+      {
+        "name": "without_treasury",
+        "check": "features",
+        "train_start": null,
+        "horizon": 1,
+        "target_kind": "point",
+        "feature_map": {
+          "ols": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix"
+          ],
+          "lasso": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ],
+          "random_forest": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ]
+        }
+      },
+      {
+        "name": "return_history_only",
+        "check": "features",
+        "train_start": null,
+        "horizon": 1,
+        "target_kind": "point",
+        "feature_map": {
+          "ols": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20"
+          ],
+          "lasso": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ],
+          "random_forest": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ]
+        }
+      },
+      {
+        "name": "point_horizon_5",
+        "check": "horizon",
+        "train_start": null,
+        "horizon": 5,
+        "target_kind": "point",
+        "feature_map": {
+          "ols": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change"
+          ],
+          "lasso": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ],
+          "random_forest": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ]
+        }
+      },
+      {
+        "name": "mean_next_5",
+        "check": "target_definition",
+        "train_start": null,
+        "horizon": 5,
+        "target_kind": "mean",
+        "feature_map": {
+          "ols": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change"
+          ],
+          "lasso": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ],
+          "random_forest": [
+            "absolute_return",
+            "mean_abs_5",
+            "mean_abs_20",
+            "vix",
+            "treasury_change",
+            "log_return",
+            "return_lag_1",
+            "abs_lag_1",
+            "abs_lag_5",
+            "squared_return",
+            "return_std_5",
+            "return_std_20"
+          ]
+        }
+      }
+    ],
+    "training_outcomes_end": "2022-12-31",
+    "evaluation_outcomes": [
+      "2023-01-01",
+      "2024-12-31"
+    ],
+    "negative_forecasts": "Scored unchanged",
+    "best_parameters": {
+      "lasso": {
+        "model__alpha": 0.05
+      },
+      "random_forest": {
+        "max_depth": 3,
+        "max_features": 0.7,
+        "min_samples_leaf": 10
+      }
+    },
+    "forest_n_estimators": 200,
+    "random_state": 42,
+    "new_tuning": false,
+    "new_fitting_on_2025": false,
+    "origin_condition_rule": "EWM at origin above pre-2023 training median versus at/below",
+    "source_hashes": {
+      "day13_configuration.json": "8380a0f22ec0e4cc74c91b674f9be7acecee70dfece02e34170dede26013adbd",
+      "day13_tuning_summary.csv": "67e93bf653171b62f8fb8c76809ba46ddd4f0ab1d8c6b84be939b68c0e2287c4",
+      "day13_validation_predictions.csv": "793e452eb7ae1357be509d6c8f7c0757531e1fc8d85203b27e3cbfa62b3d6349",
+      "day14_frozen_specification.json": "7ba2d7a52ce7a6713f7b7b9e3dffa06da16d0e5c7d80c24c74f5488182495351",
+      "day14_test_predictions.csv": "82dcddc84df574b7a52199bebdd77157326abb3b988740aac0f91fb8966b89b0",
+      "day14_run_record.json": "a9e08bac11308b9fcdb30365d9a44c8dea5f3698fc2ddf8a893be4736a02f374"
+    },
+    "development_input_sha256": "f4da42d103d6c46021d18b3b914cd7ec271e9bae7a88b62b0e7c001fee02ec40",
+    "versions": {
+      "python": "3.14.7",
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scikit_learn": "1.9.1"
+    }
+  },
+  "origin_ewm_threshold": 0.6222775332550603,
+  "robustness_result_rows": 40,
+  "original_validation_rows": 496,
+  "frozen_test_rows": 246,
+  "test_results_source": "Original day14_test_predictions.csv; no new test forecasts",
+  "original_sources_preserved": true
+}

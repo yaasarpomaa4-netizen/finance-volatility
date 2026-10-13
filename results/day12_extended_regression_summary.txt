@@ -1,0 +1,29 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        target_next_day   R-squared:                       0.381
+Model:                            OLS   Adj. R-squared:                  0.379
+Method:                 Least Squares   F-statistic:                     187.1
+Date:                Fri, 02 Oct 2026   Prob (F-statistic):          1.67e-155
+Time:                        18:37:14   Log-Likelihood:                -1782.3
+No. Observations:                1528   AIC:                             3577.
+Df Residuals:                    1522   BIC:                             3609.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+const              -0.3565      0.062     -5.780      0.000      -0.477      -0.235
+absolute_return    -0.0436      0.030     -1.431      0.153      -0.103       0.016
+mean_abs_5          0.4048      0.063      6.407      0.000       0.281       0.529
+mean_abs_20        -0.1049      0.063     -1.659      0.097      -0.229       0.019
+vix                 0.0487      0.005      9.362      0.000       0.039       0.059
+treasury_change    -1.2529      0.395     -3.171      0.002      -2.028      -0.478
+==============================================================================
+Omnibus:                      894.053   Durbin-Watson:                   2.025
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            21268.530
+Skew:                           2.263   Prob(JB):                         0.00
+Kurtosis:                      20.708   Cond. No.                         424.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

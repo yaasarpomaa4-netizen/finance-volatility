@@ -1,0 +1,79 @@
+{
+  "frozen_specification": {
+    "target": "Next S&P trading observation absolute 100*log price return",
+    "training_outcomes_end": "2022-12-31",
+    "test_outcomes": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "primary_candidate": "random_forest",
+    "simpler_competitor": "lasso",
+    "primary_metric": "RMSE",
+    "secondary_metrics": [
+      "MAE",
+      "Bias"
+    ],
+    "methods": [
+      "historical_mean",
+      "ewm_20",
+      "day12_extended",
+      "linear_expanded",
+      "ridge",
+      "lasso",
+      "random_forest"
+    ],
+    "ml_features": [
+      "absolute_return",
+      "mean_abs_5",
+      "mean_abs_20",
+      "vix",
+      "treasury_change",
+      "log_return",
+      "return_lag_1",
+      "abs_lag_1",
+      "abs_lag_5",
+      "squared_return",
+      "return_std_5",
+      "return_std_20"
+    ],
+    "day12_features": [
+      "absolute_return",
+      "mean_abs_5",
+      "mean_abs_20",
+      "vix",
+      "treasury_change"
+    ],
+    "best_parameters": {
+      "ridge": {
+        "model__alpha": 1000
+      },
+      "lasso": {
+        "model__alpha": 0.05
+      },
+      "random_forest": {
+        "max_depth": 3,
+        "max_features": 0.7,
+        "min_samples_leaf": 10
+      }
+    },
+    "random_forest_n_estimators": 200,
+    "random_state": 42,
+    "negative_predictions": "Scored unchanged",
+    "refitting": "No refit after 2022; observed predictors and baselines update causally",
+    "pre2025_input_sha256": "f4da42d103d6c46021d18b3b914cd7ec271e9bae7a88b62b0e7c001fee02ec40",
+    "versions": {
+      "python": "3.14.7",
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scikit_learn": "1.9.1"
+    },
+    "ml_training_rows": 1528,
+    "day12_training_rows": 1528
+  },
+  "test_rows": 246,
+  "potential_test_rows": 250,
+  "excluded_rows": 4,
+  "test_outcome_first": "2025-01-02",
+  "test_outcome_last": "2025-12-31",
+  "raw_file_sha256": "58771f289b5970fa59521082fcbfced50f2fa66c1f4a8edaf07c2ef7cdccd5fc"
+}

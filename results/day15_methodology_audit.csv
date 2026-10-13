@@ -1,0 +1,10 @@
+check,status,evidence
+Original development data and validation forecasts reproduced,Passed,Input fingerprint and saved prediction comparison
+Future observations do not change earlier features,Passed,"Perturbation of later prices, VIX, and yields"
+All training responses mature before validation forecasting,Passed,"Outcome-end cutoff checks, including five-day mean labels"
+Scaler fitted on training rows only,Passed,Pipeline fitted only on fit_rows; sample count asserted
+Common evaluation dates,Passed,Within-scenario methods share rows; window/feature dates match original
+No new model uses 2025 for fitting or tuning,Passed,Development ends in 2024; all fits end in 2022; test diagnostics use saved CSV
+Original saved result files preserved,Passed,File hashes unchanged
+Real-time information availability and calendar completeness,Not established,Historical FRED CSV is not a verified real-time vintage or exchange calendar
+Selection stability and superiority,Interpretation required,Eight limited scenarios; validation previously viewed; uncertainty not quantified

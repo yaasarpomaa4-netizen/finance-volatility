@@ -1,0 +1,84 @@
+{
+  "target": "Next S&P trading observation absolute 100*log price return",
+  "training_outcomes_end": "2022-12-31",
+  "validation_outcomes": [
+    "2023-01-01",
+    "2024-12-31"
+  ],
+  "cv": {
+    "n_splits": 5,
+    "test_size_retained_rows": 126,
+    "gap_retained_rows": 1
+  },
+  "tuning_metric": "RMSE",
+  "ml_features": [
+    "absolute_return",
+    "mean_abs_5",
+    "mean_abs_20",
+    "vix",
+    "treasury_change",
+    "log_return",
+    "return_lag_1",
+    "abs_lag_1",
+    "abs_lag_5",
+    "squared_return",
+    "return_std_5",
+    "return_std_20"
+  ],
+  "day12_features": [
+    "absolute_return",
+    "mean_abs_5",
+    "mean_abs_20",
+    "vix",
+    "treasury_change"
+  ],
+  "parameter_grids": {
+    "ridge": {
+      "model__alpha": [
+        0.01,
+        0.1,
+        1,
+        10,
+        100,
+        1000
+      ]
+    },
+    "lasso": {
+      "model__alpha": [
+        0.0001,
+        0.001,
+        0.01,
+        0.05,
+        0.1
+      ]
+    },
+    "random_forest": {
+      "max_depth": [
+        3,
+        6
+      ],
+      "min_samples_leaf": [
+        10,
+        30
+      ],
+      "max_features": [
+        0.7,
+        1.0
+      ]
+    }
+  },
+  "random_forest_n_estimators": 200,
+  "random_state": 42,
+  "negative_predictions": "Scored unchanged",
+  "versions": {
+    "python": "3.14.7",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit_learn": "1.9.1"
+  },
+  "pre2025_sp500_observation_input_sha256": "f4da42d103d6c46021d18b3b914cd7ec271e9bae7a88b62b0e7c001fee02ec40",
+  "first_sp500_date": "2016-10-03",
+  "ml_training_rows": 1528,
+  "day12_training_rows": 1528,
+  "validation_rows": 496
+}
